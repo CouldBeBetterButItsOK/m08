@@ -27,7 +27,7 @@ public class Player extends Person {
     public Player(String name, String nickname, int age, String color ) {
         super(name, nickname, age);
         this.color = color;
-        this.square = 1;
+        this.square = 0;
         this.nextTurn = 0;
     }
 
@@ -71,7 +71,7 @@ public class Player extends Person {
             scanner.nextLine();
             return true;
         }
-        if (nsquare % 9 == 5){
+        if (nsquare % 9 == 5 || nsquare == 1){
             System.out.println("De oca en oca y tiro por que me toca !!!");
             square = nsquare + 4;
             scanner.nextLine();
